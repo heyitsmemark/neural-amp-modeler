@@ -61,7 +61,7 @@ def _check_for_files() -> Tuple[Version, str]:
 
 def _get_valid_export_directory():
     def get_path(version):
-        return Path("/content/drive/exported_models", f"version_{version}")
+        return Path("/content/drive/MyDrive/exported_models", f"version_{version}")
 
     version = 0
     while get_path(version).exists():
