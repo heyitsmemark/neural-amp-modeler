@@ -76,6 +76,7 @@ def run(
     lr: float = 0.004,
     lr_decay: float = 0.007,
     seed: Optional[int] = 0,
+    output_name: str = "output.wav",
     user_metadata: Optional[UserMetadata] = None,
     ignore_checks: bool = False,
     fit_cab: bool = False,
@@ -97,7 +98,7 @@ def run(
 
     model = train(
         input_basename,
-        _OUTPUT_BASENAME,
+        output_name,
         _TRAIN_PATH,
         input_version=input_version,
         epochs=epochs,
