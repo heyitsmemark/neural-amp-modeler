@@ -47,10 +47,10 @@ def _check_for_files() -> Tuple[Version, str]:
         raise FileNotFoundError(
             f"Didn't find NAM's input audio file. Please upload {LATEST_VERSION.name}"
         )
-    if not Path(_OUTPUT_BASENAME).exists():
-        raise FileNotFoundError(
-            f"Didn't find your reamped output audio file. Please upload {_OUTPUT_BASENAME}."
-        )
+    # if not Path(_OUTPUT_BASENAME).exists():
+    #     raise FileNotFoundError(
+    #         f"Didn't find your reamped output audio file. Please upload {_OUTPUT_BASENAME}."
+    #     )
     if input_version != PROTEUS_VERSION:
         print(f"Found {input_basename}, version {input_version}")
     else:
