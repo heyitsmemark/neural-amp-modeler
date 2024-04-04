@@ -90,6 +90,7 @@ def run(
     :param lr: The initial learning rate
     :param lr_decay: The amount by which the learning rate decays each epoch
     :param seed: RNG seed for reproducibility.
+    :param output_name: Name of the reamped output audio file.
     :param user_metadata: User-specified metadata to include in the .nam file.
     :param ignore_checks: Ignores the data quality checks and YOLOs it
     """
