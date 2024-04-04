@@ -120,5 +120,5 @@ def run(
         print("Exporting your model...")
         model_export_outdir = _get_valid_export_directory()
         model_export_outdir.mkdir(parents=True, exist_ok=False)
-        model.net.export(model_export_outdir, user_metadata=user_metadata)
+        model.net.export(model_export_outdir, basename=output_name, user_metadata=user_metadata)
         print(f"Model exported to {model_export_outdir}. Enjoy!")
