@@ -15,6 +15,7 @@ from ._names import INPUT_BASENAMES, LATEST_VERSION, Version
 from ._version import PROTEUS_VERSION, Version
 from .core import train
 
+import os
 
 _BUGGY_INPUT_BASENAMES = {
     # 1.1.0 has the spikes at the wrong spots.
@@ -122,3 +123,5 @@ def run(
         model_export_outdir.mkdir(parents=True, exist_ok=False)
         model.net.export(model_export_outdir, basename=output_name, user_metadata=user_metadata)
         print(f"Model exported to {model_export_outdir}. Enjoy!")
+
+        return os.path.join(model_export_outdir, f"{output_name}.nam")
